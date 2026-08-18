@@ -11,8 +11,6 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog'
 import type { Treatment } from '@/lib/site-data'
-import { ReservarButton } from '@/components/reservar-button'
-import { ABONO_LABEL } from '@/lib/medilink'
 
 export function TreatmentPriceList({
   treatments,
@@ -74,16 +72,6 @@ export function TreatmentPriceList({
                 </DialogHeader>
                 <p className="text-lg font-semibold text-primary">
                   {selected.price}
-                </p>
-                <ReservarButton
-                  origen="dialog"
-                  tratamiento={selected.name}
-                  className="w-full"
-                >
-                  Reservar este tratamiento
-                </ReservarButton>
-                <p className="text-center text-sm text-muted-foreground">
-                  Reservas con {ABONO_LABEL} de abono, se descuenta del total
                 </p>
               </div>
             </>

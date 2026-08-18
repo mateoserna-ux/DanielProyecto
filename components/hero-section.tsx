@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ReservarButton } from '@/components/reservar-button'
-import { ABONO_LABEL } from '@/lib/medilink'
 
 export function HeroSection() {
   return (
@@ -26,7 +24,9 @@ export function HeroSection() {
           Medicina estética avanzada en Santiago, Antofagasta y Calama.
         </p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <ReservarButton origen="hero">Reservar mi consulta</ReservarButton>
+          <Button size="lg" nativeButton={false} render={<a href="#contacto" />}>
+            Agendar evaluación
+          </Button>
           <Button
             size="lg"
             variant="secondary"
@@ -37,9 +37,6 @@ export function HeroSection() {
             Ver tratamientos
           </Button>
         </div>
-        <p className="mt-4 text-sm text-ink-foreground/70">
-          Reserva online con {ABONO_LABEL} de abono · se descuenta de tu tratamiento
-        </p>
       </div>
     </section>
   )
