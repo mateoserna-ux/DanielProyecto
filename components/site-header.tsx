@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { navLinks } from '@/lib/site-data'
 import { cn } from '@/lib/utils'
-import { ReservarButton } from '@/components/reservar-button'
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
@@ -29,9 +29,9 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
-          <ReservarButton origen="nav" size="default">
+          <Button nativeButton={false} render={<a href="#contacto" />}>
             Agendar Evaluación
-          </ReservarButton>
+          </Button>
         </nav>
 
         <button
@@ -62,13 +62,13 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
-          <ReservarButton
-            origen="nav"
-            size="default"
+          <Button
+            nativeButton={false}
             className="mt-2 w-full"
+            render={<a href="#contacto" onClick={() => setOpen(false)} />}
           >
             Agendar Evaluación
-          </ReservarButton>
+          </Button>
         </nav>
       </div>
     </header>

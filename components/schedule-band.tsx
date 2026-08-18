@@ -1,6 +1,3 @@
-import { ReservarButton } from '@/components/reservar-button'
-import { ABONO_LABEL } from '@/lib/medilink'
-
 export function ScheduleBand() {
   return (
     <section className="bg-background">
@@ -10,12 +7,9 @@ export function ScheduleBand() {
             Horario de atención: 9:00 - 13:00 hrs y 15:00 - 18:00 hrs
           </p>
           <p className="mt-2 text-muted-foreground text-pretty">
-            Reserva tu hora online y paga un abono de {ABONO_LABEL} que se
-            descuenta del valor de tu tratamiento. Sin llamadas, cuando quieras.
+            Los precios pueden variar según evaluación personalizada. Agenda tu
+            consulta para más información.
           </p>
-          <div className="mt-6 flex justify-center">
-            <ReservarButton origen="band">Reservar mi consulta</ReservarButton>
-          </div>
         </div>
       </div>
     </section>
